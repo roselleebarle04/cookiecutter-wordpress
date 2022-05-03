@@ -57,7 +57,7 @@ services:
       - ./certbot-etc:/etc/letsencrypt
       - ./certbot-var:/var/lib/letsencrypt
       - ./wordpress_data:/var/www/html
-    command: certonly --webroot --webroot-path=/var/www/html --email {{cookiecutter.email}} --agree-tos --no-eff-email --staging -d {{cookiecutter.domain}} -d {{cookiecutter.www_domain}}
+    command: certonly --webroot --webroot-path=/var/www/html --email {{cookiecutter.email}} --agree-tos --no-eff-email --force-renewal -d {{cookiecutter.domain}} -d {{cookiecutter.www_domain}}
 
 networks:
   app-network:
