@@ -1,3 +1,5 @@
+#Source: https://zactyh.medium.com/hosting-wordpress-in-docker-with-ssl-2020-fa9391881f3
+
 version: '3'
 
 services:
@@ -39,6 +41,7 @@ services:
     restart: unless-stopped
     ports:
       - "80:80"
+      - "443:443"
     volumes:
       - ./wordpress_data:/var/www/html
       - ./nginx-conf:/etc/nginx/conf.d
